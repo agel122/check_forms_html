@@ -1,0 +1,22 @@
+<html>
+    <head>
+      <title>Test_html_forms</title>
+    </head>
+    <body>
+        <div>
+          <header>
+              <h3>Let's add anydata by html form and see it here</h3>
+          </header>
+          <br>
+          <h3>Add data</h3>
+          <form action="{% url 'myformview' %}" method="get">
+              {% csrf_token %}
+              <input name="q" type="text" value="let's add">
+          </form>
+          <br>
+          <h3>Here we are: </h3>
+          {{mydata}}
+            {{q}}
+        </div>
+    </body>
+</html>
